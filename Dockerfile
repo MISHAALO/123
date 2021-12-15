@@ -1,7 +1,7 @@
 FROM maven:3-jdk-7-alpine as build
-COPY src ./src
-COPY WebContent ./WebContent
-COPY pom.xml ./
+COPY src ./app/src
+COPY WebContent ./app/WebContent
+COPY pom.xml ./app/
 WORKDIR app
 RUN mvn package
 
